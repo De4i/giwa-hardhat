@@ -14,7 +14,18 @@ Clone repository:
 ```bash
 git clone https://github.com/De4i/giwa-hardhat.git
 cd giwa-hardhat
-
-## Install dependencies:
-```bash
 npm install
+Jika Hardhat belum terpasang di project:
+npm install --save-dev hardhat
+npm install --save-dev @nomicfoundation/hardhat-toolbox dotenv
+
+Salin file .env.example menjadi .env:
+cp .env.example .env
+nano .env
+isi dengan config seperti ini:
+PRIVATE_KEY=0x_your_private_key
+RPC_URL=https://sepolia-rpc.giwa.io
+
+npx hardhat compile
+npx hardhat test
+npx hardhat run scripts/deploy.js --network giwa
