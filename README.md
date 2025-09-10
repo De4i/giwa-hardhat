@@ -14,3 +14,7 @@ Clone repository:
 ```bash
 git clone https://github.com/De4i/giwa-hardhat.git
 cd giwa-hardhat
+
+## Install dependencies:
+```bash
+npm install
